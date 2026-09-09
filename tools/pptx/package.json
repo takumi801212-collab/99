@@ -1,0 +1,11 @@
+{
+  "name": "dekamori-tagline-deck",
+  "private": true,
+  "description": "ローソンストア100『デカ盛りチャレンジ』タグライン提案スライドのジェネレータ",
+  "scripts": {
+    "build": "node gen.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

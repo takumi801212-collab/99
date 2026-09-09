@@ -1,0 +1,479 @@
+<title>デカ盛りチャレンジ タグライン提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --paper:#FCFCF9;
+  --surface:#F1F1EC;
+  --surface-2:#E7E7E0;
+  --ink:#16181C;
+  --ink-2:#3C4048;
+  --muted:#6E7076;
+  --rule:#D6D6CE;
+  --pop:#D8232A;
+  --pop-ink:#FFFFFF;
+  --hl:#F7DE3A;
+  --hl-ink:#16181C;
+  --good:#1F7A4D;
+  --stop:#B0242A;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#131417;
+    --surface:#1C1E23;
+    --surface-2:#25282E;
+    --ink:#EDEDE8;
+    --ink-2:#C3C5C9;
+    --muted:#8E9198;
+    --rule:#31343B;
+    --pop:#FF5A5F;
+    --pop-ink:#131417;
+    --hl:#F7DE3A;
+    --hl-ink:#131417;
+    --good:#4FBE86;
+    --stop:#FF7A7E;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131417;
+  --surface:#1C1E23;
+  --surface-2:#25282E;
+  --ink:#EDEDE8;
+  --ink-2:#C3C5C9;
+  --muted:#8E9198;
+  --rule:#31343B;
+  --pop:#FF5A5F;
+  --pop-ink:#131417;
+  --hl:#F7DE3A;
+  --hl-ink:#131417;
+  --good:#4FBE86;
+  --stop:#FF7A7E;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px 120px}
+
+/* hero */
+.hero{padding:72px 0 52px;border-bottom:3px solid var(--ink)}
+.kicker{
+  font-family:"Roboto Mono",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:28px;
+}
+.kicker .tag{background:var(--pop);color:var(--pop-ink);padding:3px 9px;letter-spacing:.12em;font-weight:500}
+h1.doc{font-weight:900;font-size:clamp(22px,3.4vw,30px);line-height:1.45;margin:0 0 14px;text-wrap:balance}
+.dek{color:var(--ink-2);font-size:15px;margin:0;max-width:62ch}
+
+/* verdict */
+.verdict{margin:52px 0 0;padding:38px 32px 34px;background:var(--surface);border:1px solid var(--rule)}
+.verdict .label{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--pop);font-weight:500;margin-bottom:22px}
+.tagline{
+  font-family:"Dela Gothic One","Zen Kaku Gothic New",sans-serif;
+  font-size:clamp(30px,6.4vw,52px);line-height:1.3;letter-spacing:-.01em;margin:0;text-wrap:balance;
+}
+.tagline .hl{background:linear-gradient(transparent 58%,var(--hl) 58%,var(--hl) 96%,transparent 96%);padding:0 .06em}
+.byline{margin-top:20px;font-size:13px;color:var(--muted);font-weight:500;letter-spacing:.04em}
+.altline{margin-top:26px;padding-top:20px;border-top:1px dashed var(--rule);font-size:14px;color:var(--ink-2)}
+.altline b{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:17px;color:var(--ink)}
+
+/* sections */
+section{padding-top:64px}
+.snum{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--muted);display:block;margin-bottom:8px}
+h2{font-size:clamp(19px,2.6vw,23px);font-weight:900;line-height:1.5;margin:0 0 6px;text-wrap:balance}
+.h2rule{height:3px;background:var(--ink);margin:18px 0 30px}
+h3{font-size:16px;font-weight:700;margin:38px 0 12px;line-height:1.6}
+p{margin:0 0 18px;max-width:66ch}
+a{color:var(--pop)}
+strong{font-weight:700}
+mark{background:var(--hl);color:var(--hl-ink);padding:.08em .18em}
+ul{margin:0 0 20px;padding-left:1.2em;max-width:66ch}
+li{margin-bottom:9px}
+li::marker{color:var(--muted)}
+
+/* thesis block */
+.thesis{
+  background:var(--ink);color:var(--paper);padding:34px 30px;margin:0 0 30px;
+  font-weight:700;font-size:clamp(15px,2.4vw,19px);line-height:1.85;letter-spacing:.01em;
+}
+.thesis .y{color:var(--hl)}
+.thesis .small{display:block;font-weight:400;font-size:14px;line-height:1.85;color:var(--rule);margin-top:16px}
+
+/* tables */
+.scroll{overflow-x:auto;margin:0 0 26px;border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--rule);line-height:1.65;vertical-align:top}
+thead th{background:var(--surface-2);font-weight:700;font-size:11.5px;letter-spacing:.08em;white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:"Roboto Mono",monospace;white-space:nowrap}
+td.stop{color:var(--stop);font-weight:700}
+td.ok{color:var(--good);font-weight:700}
+
+/* callouts */
+.note{border-left:3px solid var(--pop);padding:4px 0 4px 20px;margin:0 0 26px;color:var(--ink-2);font-size:14.5px;max-width:64ch}
+.quote{border-left:3px solid var(--rule);padding:2px 0 2px 20px;margin:0 0 22px;color:var(--muted);font-size:14.5px;max-width:64ch}
+
+/* POP tier system */
+.tiers{display:flex;flex-direction:column;gap:2px;margin:0 0 30px}
+.tier{background:var(--surface);padding:26px 26px 24px;border-left:4px solid var(--pop);display:grid;grid-template-columns:1fr;gap:14px}
+.tier .meta{
+  font-family:"Roboto Mono",monospace;font-size:10.5px;letter-spacing:.16em;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:12px;
+}
+.tier .meta b{color:var(--pop);font-weight:500}
+.tier .copy{font-family:"Dela Gothic One",sans-serif;font-weight:400;line-height:1.45;margin:0}
+.tier1 .copy{font-size:clamp(24px,5vw,38px)}
+.tier2 .copy{font-size:clamp(19px,3.6vw,27px)}
+.tier3 .copy{font-size:clamp(17px,3vw,22px)}
+.tier .role{font-size:14px;color:var(--ink-2);line-height:1.8;max-width:60ch;margin:0}
+.tier3{border-left-color:var(--ink)}
+.tier2{border-left-color:var(--muted)}
+
+/* price tag */
+.price{
+  font-family:"Roboto Mono",monospace;font-weight:500;font-variant-numeric:tabular-nums;
+  background:var(--pop);color:var(--pop-ink);padding:2px 8px;font-size:14px;display:inline-block;
+}
+
+/* card templates */
+.tmpl{display:flex;flex-direction:column;gap:2px;margin:0 0 28px}
+.t{background:var(--surface);padding:22px 24px 20px;border-left:3px solid var(--rule)}
+.t .tid{font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.16em;color:var(--pop);margin-bottom:10px;font-weight:500}
+.t .form{font-family:"Roboto Mono",monospace;font-size:13px;color:var(--ink-2);margin-bottom:14px;line-height:1.8}
+.t .ex{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:12px}
+.t .ex span{font-family:"Dela Gothic One",sans-serif;font-size:16px;line-height:1.5}
+.t .why{font-size:13.5px;color:var(--muted);line-height:1.8;margin:0;max-width:60ch}
+
+/* pop mock grid */
+.mocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;margin:0 0 28px}
+.mock{background:var(--surface);padding:20px 18px;display:flex;flex-direction:column;gap:8px;min-height:160px}
+.mock .item{font-size:12.5px;color:var(--muted);line-height:1.6}
+.mock .line{font-family:"Dela Gothic One",sans-serif;font-size:19px;line-height:1.45;margin-top:auto}
+.mock .flag{font-family:"Roboto Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--stop)}
+
+/* checklist */
+ol.qs{margin:0 0 24px;padding-left:0;list-style:none;counter-reset:q}
+ol.qs li{counter-increment:q;position:relative;padding-left:44px;margin-bottom:18px;max-width:66ch;font-size:14.5px}
+ol.qs li::before{
+  content:counter(q,decimal-leading-zero);position:absolute;left:0;top:2px;
+  font-family:"Roboto Mono",monospace;font-size:11px;letter-spacing:.06em;
+  color:var(--pop-ink);background:var(--pop);padding:2px 6px;font-weight:500;
+}
+
+.src{font-size:12.5px;color:var(--muted);line-height:2}
+.src a{color:var(--muted);text-decoration-color:var(--rule)}
+.src a:hover{color:var(--pop)}
+
+:focus-visible{outline:2px solid var(--pop);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:560px){
+  .wrap{padding:0 18px 90px}
+  .verdict{padding:28px 20px}
+  .hero{padding:48px 0 40px}
+  .tier{padding:22px 20px}
+}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">
+    <span class="tag">確定版</span>
+    <span>LAWSON STORE 100</span><span>／</span>
+    <span>デカ盛りチャレンジ</span><span>／</span>
+    <span>通常回・POP主戦場</span>
+  </div>
+  <h1 class="doc">『デカ盛りチャレンジ』タグライン ＆ POPコピー設計</h1>
+  <p class="dek">「お値段そのまま」が法務上使えない、主戦場は店頭POP、通常回、単独開催。この4条件のもとで、掲出物に落とし込むところまでの設計です。</p>
+</header>
+
+<div class="verdict">
+  <div class="label">確定タグライン</div>
+  <p class="tagline">値上げには、<br><span class="hl">デカ盛り</span>で。</p>
+  <div class="byline">ローソンストア100　デカ盛りチャレンジ</div>
+  <div class="altline">
+    社内で止まった場合の即差し替え案 ── <b>物価高には、デカ盛りで。</b><br>
+    文字数・改行位置・組み方はすべて同一。<strong>入稿直前でも1語差し替えで対応できます。</strong>
+  </div>
+</div>
+
+<section>
+  <span class="snum">01 ／ 前提の確定</span>
+  <h2>いただいた6つの回答が、何を決めたか</h2>
+  <div class="h2rule"></div>
+  <div class="scroll">
+  <table>
+    <thead><tr><th class="num">#</th><th>回答</th><th>設計への影響</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td>通常回</td><td>「過去最大」「史上最大」等の実績語を封印。<strong>毎回まったく同じ言葉で回す</strong>方針が正解に</td></tr>
+      <tr><td class="num">2</td><td>「値上げ」表現を推したい</td><td>本命を据え置き。<strong>社内説得メモ（07）</strong>と、入稿直前でも差し替え可能な保険案を用意</td></tr>
+      <tr><td class="num">3</td><td>盛りすぎチャレンジと並走しない</td><td>親会社との描き分けが不要に。<strong>制約が1つ消え、言葉を強くできる</strong></td></tr>
+      <tr><td class="num">4</td><td>主戦場はPOP</td><td>設計の中心が「タグライン1本」から<strong>「三層のPOP体系」</strong>へ移動</td></tr>
+      <tr><td class="num">5</td><td>「1個買うと1個もらえる」と並走しない</td><td>上位コピー不要。<strong>デカ盛り単体に全予算・全面積を集中できる</strong></td></tr>
+      <tr><td class="num">6</td><td>増量はしているが、法務上「お値段そのまま」は言えない</td><td class="stop">最重要。本命の選択が「好み」から<strong>「必然」</strong>に変わった（→02）</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <span class="snum">02 ／ 骨子</span>
+  <h2>「お値段そのまま」が言えない ＝ この企画はお得さを名乗れない</h2>
+  <div class="h2rule"></div>
+
+  <div class="thesis">
+    お得さを<span class="y">名乗れない</span>以上、店頭で語れるものは2つしかない。<br>
+    ひとつは<span class="y">姿勢</span>。もうひとつは<span class="y">目の前の事実</span>（価格と、見た目）。
+    <span class="small">タグラインが前者を、商品札が後者を担当する。この分担が、今回のPOP設計のすべてです。</span>
+  </div>
+
+  <p>これは制約ではなく、<strong>他社との差が最も開く条件</strong>です。競合3社はいずれも「お値段そのまま＋◯%増量」という<strong>比較の言葉</strong>で戦っています。比較が使えないLS100は、必然的に<mark>比較しない言葉</mark>で戦うことになる。そしてその戦い方は、元の価格が最初から低いLS100でしか成立しません。</p>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>戦い方</th><th>使う言葉</th><th>誰が使えるか</th></tr></thead>
+    <tbody>
+      <tr><td>比較で戦う（他社）</td><td>お値段そのまま／45%／50%以上</td><td>元の価格が高い店ほど有効</td></tr>
+      <tr><td class="ok">比較しないで戦う（LS100）</td><td>姿勢 ＋ 価格の実数 ＋ 見たままの事実</td><td class="ok">元の価格が低い店でしか成立しない</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>したがって本命タグラインは、<strong>「お得です」と一言も言わずに、この企画の意味を伝える</strong>必要がある。「値上げには、デカ盛りで。」は、価格の約束をせず、増量率も名乗らず、それでも企画の存在理由を言い切っています。<strong>6番の制約が、この案を消去法ではなく必然として確定させました。</strong></p>
+</section>
+
+<section>
+  <span class="snum">03 ／ 主戦場</span>
+  <h2>POP三層設計</h2>
+  <div class="h2rule"></div>
+
+  <p>POPは「読まれる」ものではなく「<strong>目に入る</strong>」ものです。距離ごとに役割を分け、<strong>層をまたいで同じことを言わない</strong>。これが面積あたりの効率を最大化します。</p>
+
+  <div class="tiers">
+    <div class="tier tier1">
+      <div class="meta"><b>第1層</b><span>入口・什器上部・大判</span><span>視認距離 3–5m</span><span>接触 0.5秒</span></div>
+      <p class="copy">値上げには、<br>デカ盛りで。</p>
+      <p class="role"><strong>役割：姿勢の宣言。</strong>商品を1つも説明しない。ここで足を止めさせ、以降の層に引き渡す。<strong>毎回一字も変えない。</strong>企画色・書体・改行位置も固定し、数年かけてこの絵柄を店頭の記号にする。</p>
+    </div>
+    <div class="tier tier2">
+      <div class="meta"><b>第2層</b><span>売場什器・棚上ボード</span><span>視認距離 1–2m</span><span>接触 1–2秒</span></div>
+      <p class="copy">その値段で、そのデカさ。</p>
+      <p class="role"><strong>役割：価格と量の橋渡し。</strong>「値段」と「デカさ」という2語を並べるだけで、客の視線を<strong>商品と値札の往復</strong>に誘導する。比較語をひとつも含まないため、法務上も安全。ここも毎回固定。</p>
+    </div>
+    <div class="tier tier3">
+      <div class="meta"><b>第3層</b><span>商品札・プライスカード脇</span><span>視認距離 30cm</span><span>接触 2–3秒</span></div>
+      <p class="copy">カツ、2枚。<span class="price">¥538</span></p>
+      <p class="role"><strong>役割：最後のひと押し。ここだけ毎回書き換える。</strong>形容詞を使わず、<strong>数えられる事実か、身体の感覚だけ</strong>を書く。価格は必ず同じ視野に入れる。比較が使えない以上、<mark>価格の実数こそが最強のコピー</mark>だからです。</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>運用上の最大の利点：</strong>第1層と第2層は版を作り直しません。回ごとに差し替えるのは第3層の商品札のみ。<strong>制作コストと入稿工数が毎回ほぼ商品札だけで済み、かつ回を重ねるほど絵柄が資産になります。</strong>通常回だからこそ、ここを固定する価値があります。
+  </div>
+</section>
+
+<section>
+  <span class="snum">04 ／ 商品札</span>
+  <h2>第3層のコピーは、3つの型で量産する</h2>
+  <div class="h2rule"></div>
+
+  <p>担当者が誰でも同じ品質で書けるよう、型を固定します。<strong>形容詞（大きい・すごい・たっぷり・ボリューム満点）は全型で禁止</strong>。形容詞は主観であり、比較の含意が生まれやすく、しかも実物より弱いからです。</p>
+
+  <div class="tmpl">
+    <div class="t">
+      <div class="tid">型A ／ 数える ── 最優先</div>
+      <div class="form">〔数えられる事実〕。＋ 価格</div>
+      <div class="ex">
+        <span>カツ、2枚。</span><span>たまご、3段。</span><span>メンチ、3枚。</span><span>主役が、2つ。</span>
+      </div>
+      <p class="why">最も安全で最も強い型。数字は事実なので法務リスクがなく、「2枚」は「たっぷり」より必ず具体的に効く。<strong>数えられる商品は、迷わずこの型を使ってください。</strong></p>
+    </div>
+    <div class="t">
+      <div class="tid">型B ／ 身体 ── 数えられないとき</div>
+      <div class="form">〔持つ・のる・収まる等の身体感覚〕。＋ 価格</div>
+      <div class="ex">
+        <span>片手に、のらない。</span><span>持つと、重い。</span><span>スプーンが、小さく見える。</span>
+      </div>
+      <p class="why">おにぎりやプリンなど、個数で語れない商品用。<strong>必ず実物で成立を確認してから使うこと</strong>（実物が片手にのるなら使えません）。誇張ではなく描写に留めるのが、この型の生命線です。</p>
+    </div>
+    <div class="t">
+      <div class="tid">型C ／ 価格直球 ── 迷ったらこれ</div>
+      <div class="form">これで、〔価格〕円。</div>
+      <div class="ex">
+        <span>これで、171円。</span><span>これで、157円。</span>
+      </div>
+      <p class="why">事実ゼロ、価格のみ。<strong>法務確認が最も簡単で、LS100の価格帯では単体でも十分に強い。</strong>型Aも型Bも決めきれない商品は、無理に飾らずこれを使ってください。</p>
+    </div>
+  </div>
+
+  <h3>直近ラインナップへの適用例</h3>
+  <div class="mocks">
+    <div class="mock"><div class="item">ダブルロースカツカレー</div><span class="price">¥538</span><div class="line">カツ、2枚。</div></div>
+    <div class="mock"><div class="item">トリプルたまごサンド</div><span class="price">¥289</span><div class="line">たまご、3段。</div></div>
+    <div class="mock"><div class="item">トリプルメンチカツサンド</div><span class="price">¥298</span><div class="line">メンチ、3枚。</div></div>
+    <div class="mock"><div class="item">大きな白身魚フライ＆<br>ハンバーグ弁当</div><span class="price">¥538</span><div class="line">主役が、2つ。</div></div>
+    <div class="mock"><div class="item">ばくだんおにぎり<br>和風ツナマヨ</div><span class="price">¥157</span><div class="line">片手に、のらない。</div><div class="flag">※実物で要確認</div></div>
+    <div class="mock"><div class="item">ロールケーキ<br>りんご＆カスタード</div><span class="price">¥171</span><div class="line">これで、171円。</div></div>
+  </div>
+  <p style="font-size:13.5px;color:var(--muted)">※ 価格は過去回の税込価格を仮置きしたものです。実施回の確定価格に差し替えてください。型Bの1点は実物で成立確認が必要です。</p>
+</section>
+
+<section>
+  <span class="snum">05 ／ 法務</span>
+  <h2>禁止語リストと、言い換え</h2>
+  <div class="h2rule"></div>
+
+  <p>6番の制約を掲出物レベルまで落とすと、こうなります。<strong>この表を制作会社と共有すれば、上がってきた版下の一次チェックがその場で終わります。</strong></p>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>使わない</th><th>理由</th><th>言い換え</th></tr></thead>
+    <tbody>
+      <tr><td class="stop">お値段そのまま／価格据え置き</td><td>今回言えないと確認済み</td><td class="ok">価格の実数をそのまま出す</td></tr>
+      <tr><td class="stop">◯%増量／1.5倍／大幅増量</td><td>比較の言葉。根拠資料の常備が必要になる</td><td class="ok">2枚／3段など、数えられる事実</td></tr>
+      <tr><td class="stop">通常品より／いつもの◯◯より／前回より</td><td>比較対象が明示され、根拠を問われる</td><td class="ok">比較せず、目の前の事実だけ書く</td></tr>
+      <tr><td class="stop">お得／実質値下げ／激安</td><td>有利誤認に直結しやすい</td><td class="ok">価格を出し、判断は客に渡す</td></tr>
+      <tr><td class="stop">業界最大／日本一／No.1</td><td>今回は通常回。実績語は封印</td><td class="ok">使わない</td></tr>
+      <tr><td class="stop">大きい／たっぷり／ボリューム満点</td><td>主観の形容詞。実物より弱く、比較含意も生む</td><td class="ok">型A・型B・型C</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    <strong>タグライン自体の確認をおすすめする1点：</strong>「値上げには、デカ盛りで。」は価格の約束を一切していない（「値上げしない」とは言っていない）ため、有利誤認の構成にはならないと考えます。ただし<strong>「値上げには」を『当店は値上げしない』と読ませないか</strong>という論点は残るので、法務にはこの1点だけを絞って確認してください。<strong>第2層以下は比較語を含まないため、確認は不要と考えます。</strong>
+  </div>
+</section>
+
+<section>
+  <span class="snum">06 ／ ロックアップ</span>
+  <h2>タグラインと企画名は、同じ扱いで並べない</h2>
+  <div class="h2rule"></div>
+
+  <p>タグラインと企画名を<strong>同じ級数・同じ書体で縦に並べない</strong>。並べると「デカ盛り」が同じ扱いで2回現れ、読み手には<mark>同じことを2回言っているようにしか見えません</mark>。</p>
+
+  <div class="tiers">
+    <div class="tier tier3" style="border-left-color:var(--pop)">
+      <div class="meta"><b>NG</b><span>同じ級数・同じ書体で3行並べる</span></div>
+      <p class="copy" style="font-size:clamp(17px,3vw,22px)">値上げには、<br>デカ盛りで。<br>デカ盛りチャレンジ</p>
+      <p class="role" style="color:var(--pop)">「デカ盛り」が同じ扱いで2回出る。企画名がタグラインの一部として読まれてしまい、どちらの言葉も弱くなる。</p>
+    </div>
+    <div class="tier tier3" style="border-left-color:var(--ink)">
+      <div class="meta"><b>OK</b><span>タグラインは「言葉」、企画名は「情報」</span></div>
+      <p class="copy" style="font-size:clamp(19px,3.6vw,27px)">値上げには、<br>デカ盛りで。</p>
+      <p style="font-size:12px;color:var(--muted);margin:0">デカ盛りチャレンジ　5/13（水）〜5/26（火）　ローソンストア100</p>
+      <p class="role">企画名の級数はタグラインの<strong>1/4以下</strong>、色は無彩色、位置は下端。開催期間や店舗表記と同じ「情報」の階層に落とす。読み順が「言葉 → これは何の企画か」になり、重複が階層に変わる。</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>「デカ盛り」の連呼自体は、店頭では悪くありません。</strong>問題になるのは、同じ級数・同じ書体で縦に並べたときだけです。
+  </div>
+
+  <h3>重複を完全に消したい場合の代替案</h3>
+  <div class="tmpl">
+    <div class="t" style="border-left-color:var(--pop)">
+      <div class="tid">第2候補</div>
+      <div class="ex"><span style="font-size:22px">値上げには、デカ盛りチャレンジで。</span></div>
+      <p class="why">タグラインが企画名を内包するため、企画名の別掲そのものが不要になる。ただし16字に伸び、語尾が重くなるぶん切れ味は落ちる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="snum">07 ／ 版下</span>
+  <h2>POP物理設計のルール</h2>
+  <div class="h2rule"></div>
+  <ul>
+    <li><strong>改行位置を固定する。</strong>「値上げには、／デカ盛りで。」の2行組を正とする。1行組は横に間延びし、遠見での視認速度が落ちます。読点2つが呼吸をつくるので、<strong>縦組みでもそのまま成立します</strong></li>
+    <li><strong>書体は極太ゴシック一択。</strong>細い書体や明朝は、デカ盛りという企画の内容と矛盾します。<strong>言葉の意味と文字の太さを一致させる</strong></li>
+    <li><strong>企画色を固定し、毎回変えない。</strong>通常回を毎回同じ色で打つことでしか、店頭での記号化は起きません。回ごとの色替えは資産形成を毎回ゼロに戻します</li>
+    <li><strong>コピー単体のPOPを作らない。</strong>必ず価格が同じ視野に入るよう配置する。比較訴求が使えない以上、<strong>説得力の最大値は価格の実数</strong>にあります</li>
+    <li><strong>第3層は「1商品1メッセージ」。</strong>商品札に2つ以上の情報を載せると、30cm・2秒では両方読まれません</li>
+  </ul>
+</section>
+
+<section>
+  <span class="snum">08 ／ 社内</span>
+  <h2>「値上げ」表現を通すための説得メモ</h2>
+  <div class="h2rule"></div>
+
+  <p>会議で出る反論はほぼ1つです ──「自社広告でネガティブワードを使うのか」。以下をそのまま使ってください。</p>
+
+  <div class="quote">
+    ① 主語は「世の中の値上げ」であり、特定企業の非難ではありません。<br>
+    ② 「当社は値上げしない」とは一言も言っていません。<strong>言っているのは「値上げに対して量で応える」という姿勢だけ</strong>で、実態と矛盾しません。<br>
+    ③ そして今回、<strong>法務確認により「お値段そのまま」が使えません。つまりこの企画は、お得さを名乗れない。</strong>名乗れない以上、語れるのは姿勢だけです。<br>
+    ④ この案は新しい主張ではありません。<strong>直近リリース見出し「値上げが続く今こそ応援！」の主語と述語を残しただけ</strong>です。社として既に言っている言葉を、POPに載る長さに研いだものです。
+  </div>
+
+  <p><strong>④が最も効きます。</strong>「新しく踏み込む案」ではなく「すでに社が言っていることの圧縮」だと示せれば、論点は表現の可否から文字数の話に降ります。</p>
+
+  <div class="note">
+    それでも通らなかった場合は<strong>「物価高には、デカ盛りで。」</strong>へ。文字数・改行位置・組み方が同一なので、<strong>版下を作り直さずに1語だけ差し替えられます</strong>。強度は1割ほど落ちますが、三層設計は一切変わりません。
+  </div>
+</section>
+
+<section>
+  <span class="snum">09 ／ 運用</span>
+  <h2>通常回だからこそ、変えない</h2>
+  <div class="h2rule"></div>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>要素</th><th class="num">更新頻度</th><th>方針</th></tr></thead>
+    <tbody>
+      <tr><td>第1層タグライン</td><td class="num">不変</td><td>一字も変えない。数年かけて記号化する</td></tr>
+      <tr><td>第2層ボード</td><td class="num">不変</td><td>版を作り直さない</td></tr>
+      <tr><td>企画色・書体・改行</td><td class="num">不変</td><td>回ごとに変えると資産形成が毎回ゼロに戻る</td></tr>
+      <tr><td>第3層 商品札</td><td class="num">毎回</td><td>型A→B→Cの優先順で機械的に生成</td></tr>
+      <tr><td>実績語（過去最大 等）</td><td class="num">使わない</td><td>通常回では封印。特別回のために温存する</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>年2〜3回の定期企画で最も効くのは、強い言葉を毎回考え直すことではなく、<strong>そこそこ強い言葉を一度決めて絶対に変えないこと</strong>です。3回目の掲出から、客は言葉を読まずに絵柄で企画を認識しはじめます。</p>
+</section>
+
+<section>
+  <span class="snum">10 ／ 次の一手</span>
+  <h2>この設計を動かすために必要なもの</h2>
+  <div class="h2rule"></div>
+  <ol class="qs">
+    <li><strong>今回の対象商品リストと確定価格</strong> ── いただければ、全商品ぶんの第3層コピーを型に沿って書き切ります</li>
+    <li><strong>「値上げには」の法務確認</strong> ── 05の絞った1点のみ。結果次第で保険案に切り替えます</li>
+    <li><strong>型Bを使う商品の実物確認</strong> ── 「片手にのらない」等が実物で成立するか。成立しなければ型Cに落とします</li>
+    <li><strong>POP什器のサイズ・掲出面数</strong> ── 三層それぞれの版下サイズを詰めるのに必要です</li>
+  </ol>
+</section>
+
+<section>
+  <span class="snum">出典</span>
+  <h2>参照した公表情報</h2>
+  <div class="h2rule"></div>
+  <div class="src">
+    <a href="https://prtimes.jp/main/html/rd/p/000000568.000025635.html">ローソンストア100『デカ盛りチャレンジ』リリース（2026年5月）</a><br>
+    <a href="https://prtimes.jp/main/html/rd/p/000000515.000025635.html">同・全25品（2025年2月）</a><br>
+    <a href="https://prtimes.jp/main/html/rd/p/000000522.000025635.html">同・「盛りすぎチャレンジ」連動 約50%増量28品</a><br>
+    <a href="https://store100.lawson.co.jp/newentry/topics/detail/1521362_5006.html">ローソンストア100 公式「帰ってきた！デカ盛りチャレンジ」</a><br>
+    <a href="https://store100.lawson.co.jp/newentry/topics/detail/1512664_5006.html">同・2025年11月回</a><br>
+    <a href="https://www.ssnp.co.jp/distribution/653978/">食品産業新聞社「31品がボリュームアップ 4週間デカ盛りチャレンジ」</a><br>
+    <a href="https://www.lawson.co.jp/company/news/detail/1506197_2504.html">ローソン「盛りすぎチャレンジ」過去最大41品</a><br>
+    <a href="https://www.family.co.jp/company/news_releases/2026/20260319_01.html">ファミリーマート「なぜか45%増量作戦」</a><br>
+    <a href="https://www.sej.co.jp/company/news_release/news/2026/202605071000.html">セブン‐イレブン 創業感謝祭「感謝盛り」</a><br>
+    <a href="https://www.ryutsuu.biz/column/r20250723001.html">流通ニュース 小栗知義社長インタビュー</a><br>
+    <a href="https://www.ryutsuu.biz/strategy/p031342.html">流通ニュース ローソンストア100 顧客構成</a>
+  </div>
+</section>
+
+</div>
